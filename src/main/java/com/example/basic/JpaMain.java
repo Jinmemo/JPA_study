@@ -1,9 +1,11 @@
-package com.example;
+package com.example.basic;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+
+import com.example.entity.Member;
 
 public class JpaMain {
 
@@ -46,7 +48,7 @@ public class JpaMain {
              * ====== 4. 데이터 삭제 (DELETE) ======
              * remove()로 삭제 요청을 하면, 트랜잭션 커밋 시점에 DELETE 쿼리가 실행됨.
              */
-            em.remove(findMember);
+			/* em.remove(findMember); */
 
             // 5. 모든 작업을 정상적으로 마쳤다면 커밋 (DB 반영)
             tx.commit();

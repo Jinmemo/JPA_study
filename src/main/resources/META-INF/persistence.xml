@@ -22,8 +22,8 @@
 
             <!-- 하이버네이트 전용 설정 -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-            <!-- 실행 시 기존 테이블을 지우고 새로 생성 (학습용) -->
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+			<!-- 클래스 독립해도 데이터 유지되게 create -> update로 변경 -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <!-- 실행되는 SQL 출력 -->
             <property name="hibernate.show_sql" value="true"/>
             <!-- SQL을 보기 좋게 정렬 -->
